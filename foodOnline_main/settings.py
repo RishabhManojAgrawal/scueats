@@ -24,7 +24,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = config('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = config('DEBUG')
 
 ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com' ]
 
@@ -171,7 +171,7 @@ GOOGLE_API_KEY = config('GOOGLE_API_KEY')
 PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
-
-if DEBUG == True:
-    GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
-    GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+# print("DEBUD,DEBUG")
+# if DEBUG:
+GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
