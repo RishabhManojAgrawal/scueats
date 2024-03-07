@@ -46,6 +46,7 @@ def my_orders(request):
 
 
 def order_detail(request, order_number):
+    print("hereee")
     try:
         order = Order.objects.get(order_number=order_number, is_ordered=True)
         ordered_food = OrderedFood.objects.filter(order=order)
@@ -60,6 +61,7 @@ def order_detail(request, order_number):
             'tax_data': tax_data,
         }
         return render(request, 'customers/order_detail.html', context)
-    except:
+    except Exception as e:
+        print("exception",e)
         return redirect('customer')
     
