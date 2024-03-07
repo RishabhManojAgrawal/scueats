@@ -171,6 +171,7 @@ GOOGLE_API_KEY = config('GOOGLE_API_KEY')
 PAYPAL_CLIENT_ID = config('PAYPAL_CLIENT_ID')
 SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
-GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
 
-GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+if DEBUG == True:
+    GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+    GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
