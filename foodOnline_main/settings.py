@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com' ]
+ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com','18.224.67.61']
 
 
 # Application definition
@@ -173,5 +173,5 @@ SECURE_CROSS_ORIGIN_OPENER_POLICY = 'same-origin-allow-popups'
 
 # print("DEBUD,DEBUG")
 # if DEBUG:
-GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
-GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
+# GDAL_LIBRARY_PATH = '/opt/homebrew/lib/libgdal.dylib'
+# GEOS_LIBRARY_PATH = '/opt/homebrew/lib/libgeos_c.dylib'
