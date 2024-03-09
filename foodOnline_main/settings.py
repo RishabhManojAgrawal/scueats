@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com','18.224.67.61']
+ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com','3.133.158.159']
 
 
 # Application definition
