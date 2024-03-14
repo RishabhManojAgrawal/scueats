@@ -26,7 +26,7 @@ SECRET_KEY = config('SECRET_KEY')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = config('DEBUG')
 
-ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com','3.133.158.159']
+ALLOWED_HOSTS = ['104.237.153.13','127.0.0.1', 'scueats.com','www.scueats.com','3.133.158.159','nitu-test-alb-1443457275.us-east-2.elb.amazonaws.com','d1asp59o1xs2s1.cloudfront.net']
 
 
 # Application definition
@@ -88,15 +88,25 @@ WSGI_APPLICATION = "foodOnline_main.wsgi.application"
 # Database
 # https://docs.djangoproject.com/en/5.0/ref/settings/#databases
 
+# DATABASES = {
+#     "default": {
+#        'ENGINE': 'django.db.backends.postgresql',
+#     #    'ENGINE': 'django.contrib.gis.db.backends.postgis',
+#         'NAME': config('DB_NAME'),
+#         'USER': config('DB_USER'),
+#         'PASSWORD': config('DB_PASSWORD'),
+#         'HOST': config('DB_HOST'),
+
+#     }
+# }
 DATABASES = {
     "default": {
-       'ENGINE': 'django.db.backends.postgresql',
-    #    'ENGINE': 'django.contrib.gis.db.backends.postgis',
-        'NAME': config('DB_NAME'),
-        'USER': config('DB_USER'),
-        'PASSWORD': config('DB_PASSWORD'),
-        'HOST': config('DB_HOST'),
-
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'postgres',
+        'USER': 'postgres',
+        'PASSWORD': 'root123',
+        'HOST': 'ec2-3-145-89-95.us-east-2.compute.amazonaws.com',
+        'PORT': '5432',
     }
 }
 AUTH_USER_MODEL = 'accounts.User'
