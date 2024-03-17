@@ -11,5 +11,8 @@ pip install -r requirements.txt
 
 - Install Postgres
 
-- Run makemigrations and migrate commands: 
+- Run migrations: 
 python manage.py migrate
+
+- Run the server
+python manage.py runserver
